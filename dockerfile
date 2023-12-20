@@ -1,4 +1,8 @@
-# Basic nginx dockerfile starting with Ubuntu 20.04
-FROM ubuntu:20.04
-RUN apt-get -y update
-RUN apt-get -y install nginx
+FROM nginx:latest
+
+COPY index.html /usr/share/nginx/html
+COPY linux.png /usr/share/nginx/html
+
+EXPOSE 80 443 	
+
+CMD ["nginx", "-g", "daemon off;"]
