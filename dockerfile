@@ -1,8 +1,17 @@
-FROM nginx:latest
+FROM node:12.18.2 as build
 
-COPY index.html /usr/share/nginx/html
-COPY linux.png /usr/share/nginx/html
+ARG REACT_APP_SERVICES_HOST=/services/m
 
-EXPOSE 80 443 	
+WORKDIR /app
 
-CMD ["nginx", "-g", "daemon off;"]
+COPY ./package.json /app/package.json
+COPY ./package-lock.json /app/package-lock.json
+
+RUN yarn install
+COPY . .
+RUN yarn build
+
+
+FROM nginx
+COPY ./nginx/nginx.conf /etc/nginx/conf.d/default.conf
+COPY --from=build /app/build /usr/share/nginx/html
