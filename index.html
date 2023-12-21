@@ -1,46 +1,26 @@
-<html>
-    <head>
-        <style>
-
-        body {
-        	background-image: linear-gradient(-74deg, transparent 90%, rgba(255, 255, 255, 0.23) 20%),
-                              linear-gradient(-74deg, transparent 83%, rgba(255, 255, 255, 0.18) 15%),
-                              linear-gradient(-74deg, transparent 76%, rgba(255, 255, 255, 0.1) 15%),
-                              linear-gradient(to top, #127ab1, #1799e0, #1796db);
-    		background-size: cover;
-    		margin-bottom: 0px!important;
-        }
-
-        div{
-            font-family: 'Geomanist', sans-serif;
-  			font-weight: normal;
-  			color: white;
-            width: 50%;
-            margin: 0 auto;
-            position: relative;
-            top: 50%;
-            transform: translateY(-50%);
-
-        }
-        </style>
-    </head>
-
-    <body>
-        
-        <img src=https://www.docker.com/sites/all/themes/docker/assets/images/brand-full.svg width=20%></img>
-
-        <div class="inner">
-            <center><h1>Linux Tweet App!</h1></center>
-
-            <center><img src="./linux.png"></img>
-                <P>
-
-                You've successfully deployed the Linux tweet app! Why not let the world know?
-
-                <p>
-
-            <a href="https://twitter.com/intent/tweet?button_hashtag=#Docker" class="twitter-hashtag-button" data-size="large" data-text="I'm learning how to deploy #Docker containers." data-url="http://www.docker.com" data-lang="en" data-show-count="false">Tweet</a><script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
-        </div>
-    </body>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Colorify</title>
+  <link rel="stylesheet" href="./index.css">
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Colorify</h1>
+    <p class="subheading">
+      With colorify we want to start
+      learning JavaScript.
+    </p>
+    <div class="circle" id="circleID"></div>
+    <div class="action">
+      <button onclick="paint('red')">Red</button>
+      <button onclick="paint('green')">Green</button>
+      <button onclick="paint('yellow')">Yellow</button>
+    </div>
+  </div>
+</body>
 </html>
